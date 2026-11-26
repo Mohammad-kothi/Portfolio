@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#151513"/>
+  <g transform="translate(205 70)">
+    <rect width="390" height="860" rx="44" fill="#0b0b0a" stroke="#3a3935" stroke-width="3"/>
+    <rect x="14" y="14" width="362" height="832" rx="32" fill="#f3f0e9"/>
+    <rect x="145" y="26" width="100" height="22" rx="11" fill="#0b0b0a"/>
+    <!-- header -->
+    <rect x="34" y="72" width="18" height="18" fill="#ff4d2e"/>
+    <text x="62" y="88" font-family="Impact, 'Arial Narrow', sans-serif" font-size="20" fill="#111">KOTHI STEEL</text>
+    <g fill="#111"><rect x="320" y="74" width="26" height="3"/><rect x="320" y="83" width="26" height="3"/></g>
+    <!-- product image -->
+    <rect x="34" y="116" width="322" height="240" fill="#1a1a18"/>
+    <g fill="#3a3935" stroke="#55534d" stroke-width="2">
+      <path d="M90 170h210v16H90zM90 290h210v16H90z"/>
+      <path d="M185 186h20v104h-20z" fill="#2a2926"/>
+    </g>
+    <text x="48" y="340" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#a39e94" letter-spacing="1.5">1 / 4</text>
+    <!-- title -->
+    <text x="34" y="392" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#ff4d2e" letter-spacing="2">BEAMS · STRUCTURAL</text>
+    <text x="34" y="440" font-family="Impact, 'Arial Narrow', sans-serif" font-size="44" fill="#111">ISMB 200</text>
+    <text x="34" y="485" font-family="Impact, 'Arial Narrow', sans-serif" font-size="44" fill="#111">I-BEAM</text>
+    <!-- specs -->
+    <g font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#3b3a36">
+      <line x1="34" y1="512" x2="356" y2="512" stroke="#d1cbbf"/>
+      <text x="34" y="540">GRADE</text><text x="356" y="540" text-anchor="end" fill="#111">IS 2062 E250</text>
+      <line x1="34" y1="556" x2="356" y2="556" stroke="#d1cbbf"/>
+      <text x="34" y="584">DEPTH</text><text x="356" y="584" text-anchor="end" fill="#111">200 mm</text>
+      <line x1="34" y1="600" x2="356" y2="600" stroke="#d1cbbf"/>
+      <text x="34" y="628">LENGTH</text><text x="356" y="628" text-anchor="end" fill="#111">6 m / 12 m</text>
+      <line x1="34" y1="644" x2="356" y2="644" stroke="#d1cbbf"/>
+      <text x="34" y="672">WEIGHT</text><text x="356" y="672" text-anchor="end" fill="#111">25.4 kg/m</text>
+      <line x1="34" y1="688" x2="356" y2="688" stroke="#d1cbbf"/>
+    </g>
+    <!-- CTA -->
+    <rect x="34" y="720" width="322" height="56" fill="#ff4d2e"/>
+    <text x="195" y="754" font-family="ui-monospace, Menlo, monospace" font-size="14" fill="#111" text-anchor="middle" letter-spacing="2">ENQUIRE ABOUT THIS</text>
+    <rect x="34" y="788" width="322" height="40" fill="none" stroke="#111"/>
+    <text x="195" y="813" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#111" text-anchor="middle" letter-spacing="2">CALL THE OFFICE</text>
+  </g>
+</svg>
