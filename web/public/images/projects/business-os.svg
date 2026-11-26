@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff4d2e" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ff4d2e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#0b0b0a"/>
+  <g font-family="ui-monospace, Menlo, monospace">
+    <!-- top bar -->
+    <rect x="0" y="0" width="1600" height="54" fill="#141412"/>
+    <text x="40" y="34" font-size="14" fill="#f3f0e9" letter-spacing="3">BUSINESS/OS</text>
+    <text x="1560" y="34" font-size="13" fill="#a39e94" text-anchor="end" letter-spacing="2">MON 09:14 · LOCAL · OFFLINE-FIRST</text>
+    <circle cx="1285" cy="29" r="5" fill="#ff4d2e"/>
+    <!-- sidebar -->
+    <rect x="0" y="54" width="96" height="946" fill="#111110"/>
+    <g fill="none" stroke="#5a5750" stroke-width="2">
+      <rect x="32" y="100" width="32" height="32"/><rect x="32" y="170" width="32" height="32" stroke="#ff4d2e"/>
+      <circle cx="48" cy="256" r="16"/><path d="M32 320h32M32 330h22M32 340h28"/><path d="M34 400l14-16 14 16v14H34z"/>
+    </g>
+    <rect x="0" y="170" width="3" height="32" fill="#ff4d2e"/>
+    <!-- KPI cards -->
+    <g transform="translate(136 94)">
+      <g>
+        <rect width="330" height="170" fill="#141412" stroke="#2a2925"/>
+        <text x="24" y="38" font-size="12" fill="#a39e94" letter-spacing="2">LABOUR PRESENT</text>
+        <text x="24" y="118" font-family="Impact, 'Arial Narrow', sans-serif" font-size="68" fill="#f3f0e9">142/150</text>
+        <rect x="24" y="138" width="282" height="6" fill="#2a2925"/><rect x="24" y="138" width="267" height="6" fill="#ff4d2e"/>
+      </g>
+      <g transform="translate(350 0)">
+        <rect width="330" height="170" fill="#141412" stroke="#2a2925"/>
+        <text x="24" y="38" font-size="12" fill="#a39e94" letter-spacing="2">FUEL TODAY</text>
+        <text x="24" y="118" font-family="Impact, 'Arial Narrow', sans-serif" font-size="68" fill="#f3f0e9">1,240 L</text>
+        <text x="24" y="148" font-size="12" fill="#a39e94">7 VEHICLES OUT</text>
+      </g>
+      <g transform="translate(700 0)">
+        <rect width="330" height="170" fill="#ff4d2e"/>
+        <text x="24" y="38" font-size="12" fill="#0b0b0a" letter-spacing="2">BILLS FLAGGED</text>
+        <text x="24" y="118" font-family="Impact, 'Arial Narrow', sans-serif" font-size="68" fill="#0b0b0a">03</text>
+        <text x="24" y="148" font-size="12" fill="#0b0b0a">ABOVE MARKET RATE</text>
+      </g>
+    </g>
+    <!-- chart -->
+    <g transform="translate(136 294)">
+      <rect width="1030" height="440" fill="#141412" stroke="#2a2925"/>
+      <text x="24" y="40" font-size="12" fill="#a39e94" letter-spacing="2">DAILY OUTPUT · TONNES · 30 DAYS</text>
+      <g stroke="#2a2925"><line x1="24" y1="120" x2="1006" y2="120"/><line x1="24" y1="220" x2="1006" y2="220"/><line x1="24" y1="320" x2="1006" y2="320"/><line x1="24" y1="400" x2="1006" y2="400"/></g>
+      <path d="M24 330 L90 310 L156 318 L222 280 L288 296 L354 250 L420 262 L486 230 L552 244 L618 200 L684 214 L750 176 L816 190 L882 150 L948 166 L1006 128 L1006 400 L24 400Z" fill="url(#area)"/>
+      <polyline points="24,330 90,310 156,318 222,280 288,296 354,250 420,262 486,230 552,244 618,200 684,214 750,176 816,190 882,150 948,166 1006,128" fill="none" stroke="#ff4d2e" stroke-width="3"/>
+      <circle cx="1006" cy="128" r="6" fill="#ff4d2e"/>
+    </g>
+    <!-- table -->
+    <g transform="translate(136 764)">
+      <rect width="1030" height="200" fill="#141412" stroke="#2a2925"/>
+      <text x="24" y="38" font-size="12" fill="#a39e94" letter-spacing="2">VEHICLES</text>
+      <g font-size="14" fill="#f3f0e9">
+        <text x="24" y="86">GJ-17 · TRUCK 04</text><text x="520" y="86" fill="#a39e94">GODHRA → VADODARA</text><text x="1006" y="86" text-anchor="end">182 L</text>
+        <text x="24" y="128">GJ-17 · TRUCK 07</text><text x="520" y="128" fill="#a39e94">YARD</text><text x="1006" y="128" text-anchor="end">0 L</text>
+        <text x="24" y="170">GJ-17 · LOADER 02</text><text x="520" y="170" fill="#a39e94">SITE B</text><text x="1006" y="170" text-anchor="end" fill="#ff4d2e">LOW</text>
+      </g>
+    </g>
+    <!-- assistant -->
+    <g transform="translate(1196 94)">
+      <rect width="368" height="870" fill="#141412" stroke="#2a2925"/>
+      <text x="24" y="40" font-size="12" fill="#ff4d2e" letter-spacing="2">● ASSISTANT</text>
+      <rect x="24" y="70" width="300" height="96" fill="#1e1e1b"/>
+      <text x="40" y="104" font-size="13" fill="#f3f0e9">Good morning. 8 workers</text>
+      <text x="40" y="126" font-size="13" fill="#f3f0e9">absent, 3 bills above</text>
+      <text x="40" y="148" font-size="13" fill="#f3f0e9">market rate. Review?</text>
+      <rect x="120" y="186" width="224" height="52" fill="#ff4d2e"/>
+      <text x="136" y="218" font-size="13" fill="#0b0b0a">Show the bills</text>
+      <rect x="24" y="258" width="300" height="140" fill="#1e1e1b"/>
+      <text x="40" y="292" font-size="13" fill="#f3f0e9">TMT 12mm   ₹58.4k/t</text>
+      <text x="40" y="318" font-size="13" fill="#a39e94">market     ₹55.9k/t</text>
+      <text x="40" y="352" font-size="13" fill="#ff4d2e">+4.5% over</text>
+      <rect x="24" y="800" width="320" height="44" fill="none" stroke="#2a2925"/>
+      <text x="40" y="828" font-size="13" fill="#5a5750">Ask anything…</text>
+    </g>
+    <text x="1564" y="990" font-size="11" fill="#5a5750" text-anchor="end" letter-spacing="2">CONCEPT MOCKUP · ILLUSTRATIVE DATA</text>
+  </g>
+</svg>

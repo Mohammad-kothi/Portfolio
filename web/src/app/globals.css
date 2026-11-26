@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+/* ── Design tokens ─────────────────────────────────────────────────────────── */
+@theme {
+  --color-ink: #0b0b0a;
+  --color-ink-2: #121210;
+  --color-ink-3: #1a1a17;
+  --color-line: #2a2925;
+  --color-line-strong: #45433d;
+  --color-paper: #f3f0e9;
+  --color-muted: #a39e94; /* 7.4:1 on ink */
+  --color-accent: #ff4d2e; /* coral-red, 5.9:1 on ink */
+  --color-accent-soft: #ff7a5c;
+
+  --ease-expo: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-blink: blink 2.4s ease-in-out infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.35;
+    }
+  }
+}
+
+@theme inline {
+  --font-display: var(--font-anton), "Arial Narrow", Impact, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+    background: var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Chrome's scroll anchoring misfires on the many transformed, animating elements and drags the page
+     ~1,700px after an in-page jump. Images all have fixed ratios, so there is no layout shift for it to fix. */
+  html,
+  body {
+    overflow-anchor: none;
+  }
+
+  body {
+    overflow-x: clip;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+/* ── Utilities ─────────────────────────────────────────────────────────────── */
+
+/* Page shell: the 12-column grid everything sits on. */
+@utility shell {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 3rem;
+  }
+}
+
+/* Outlined display text. */
+@utility text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in oklab, var(--color-paper) 30%, transparent);
+}
+@utility text-outline-strong {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-paper);
+}
+@utility text-outline-accent {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-accent);
+}
+
+/* Compact metadata label. */
+@utility meta {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ── Intro curtain ─────────────────────────────────────────────────────────────
+ * Black panel lifts away, then the coral panel underneath follows, uncovering the page.
+ * Pure CSS so it runs before JavaScript loads and can never get stuck. Timing matches INTRO in MotionProvider. */
+.intro {
+  animation: intro-hide 0s linear 1.25s forwards;
+}
+.intro-ink {
+  animation: intro-lift 0.75s cubic-bezier(0.76, 0, 0.24, 1) 0.3s both;
+}
+.intro-accent {
+  animation: intro-lift 0.75s cubic-bezier(0.76, 0, 0.24, 1) 0.42s both;
+}
+.intro-label {
+  animation: intro-label 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.intro-bar {
+  animation: intro-bar 0.55s cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+@keyframes intro-lift {
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes intro-hide {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes intro-label {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+    filter: blur(4px);
+  }
+}
+@keyframes intro-bar {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes grid-draw {
+  from {
+    transform: scaleY(0);
+  }
+}
+.grid-draw {
+  transform-origin: top;
+  animation: grid-draw 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro {
+    display: none;
+  }
+  .grid-draw {
+    animation: none;
+  }
+}
+
+/* Animated underline for text links. */
+@utility link-underline {
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.45s var(--ease-expo);
+
+  &:hover,
+  &:focus-visible {
+    background-size: 100% 1px;
+  }
+}
